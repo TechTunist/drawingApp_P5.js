@@ -1,0 +1,131 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+    overflow: hidden;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+    
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 5px;
+    font-size: 20px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+.wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 80px 230px  minmax(500px, 1fr);
+    grid-template-rows: 35px minmax(500px, 1fr) 160px;
+    grid-template-areas:
+           "header header header"
+            "sidebar content content"
+            "colourP colourP options";
+    background-color: #fff;
+    color: #444;
+}
+
+
+.box {
+  background-color: #666;
+  color: #fff;
+  font-size: 130%;
+}
+
+
+.header {
+  background-color: #999;
+}
+
+
+.BTN-tool{
+    min-width: 100px;
+    padding: 3px;
+    background-color: #666;
+    color: white;
+    margin: 5px;
+}
+
+
+.BTN-tool:hover{
+    border: none;
+    color: black;
+    padding: 5px;
+    background-color: lightgrey;
+    transition: 0.2s;
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+    margin-left: 305px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Text inside the labels */
+.dropdown-content label {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
